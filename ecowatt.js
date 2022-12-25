@@ -10,8 +10,7 @@ module.exports = function(RED) {
       var node = this;
       const https = require('https');
 
-      node.on('input',  function(msg) {    
-           
+      node.on('input',  function(msg) {              
           var options = {
               hostname: "digital.iservices.rte-france.com",
               port: 443,
@@ -28,7 +27,12 @@ module.exports = function(RED) {
                 body = body + chunk;
               });           
               resp.on('end',function(){
-
+                  if (resp.statusCode!=200) {
+                    msg.payload="Error getting token, check Oauth STR configuration";
+                    node.status({fill:"red",shape:"ring",text:"Error getting token"});
+                    node.send(msg); 
+                    return;
+                  }
                   var token=JSON.parse(body).access_token;
                   if ( !token ) { 
                     msg.payload = body;
@@ -50,7 +54,6 @@ module.exports = function(RED) {
                           body2 = body2 + chunk;
                         });
                       resp.on('end',function(){
-                          //console.log('body=',body2);
                           if (body2!='') {
                               var r_obj = JSON.parse(body2);
                               console.log("res=",r_obj.signals[0].message);
@@ -59,8 +62,8 @@ module.exports = function(RED) {
                               node.send(msg);                          
                           }
                           else {
-                            msg.payload="Please wait 15mn between API Call";
-                            node.status({fill:"red",shape:"ring",text:"API call delayed"});
+                            msg.payload="Error API Call blocked for "+resp.rawHeaders[11]+" seconds";
+                            node.status({fill:"red",shape:"ring",text:"API call delayed "+resp.rawHeaders[11]+'s'});
                             node.send(msg);
                           }
                       }); 
