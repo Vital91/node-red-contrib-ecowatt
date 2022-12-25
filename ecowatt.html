@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    RED.nodes.registerType('ecowatt',{
+        category: 'function',
+        color: '#C0DEED',
+        defaults: {
+            name: {value:""},
+            ostr: {value:"OWM1Yj...VlYg=="},
+            sandbox: {value:true}
+
+        },
+        inputs:1,
+        outputs:1,
+        icon: "ecowatt.png",
+        label: function() {
+            return this.name||"ecowatt";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="ecowatt">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">  
+        <label for="node-input-ostr"><i class="fa fa-tag"></i> Oauth STR</label>
+        <input type="text" id="node-input-ostr" placeholder="Ostr">
+    </div>
+    <div class="form-row">
+        <input type="checkbox" id="node-input-sandbox" style="display: inline-block; width: auto; vertical-align: top;" placeholder="Sandbox">
+        <label for="node-input-sandbox" style="width: auto" data-i18n="httpin.persistent-http"> Use RTE Sandbox URL</label>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="lower-case">
+    <p>A node to get RTE Ecowatt forcast</p>
+</script>
