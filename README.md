@@ -9,7 +9,7 @@ API documentation here : https://data.rte-france.com/documents/20182/224298/FR_G
 ## Installation
 using npm
 
-##Setup
+## Setup
 
 0) Drag and drop "echowatt" Node into your Nodered project.
 1) Go to RTE digital site : https://data.rte-france.com/create_account and create new account.
@@ -24,7 +24,7 @@ using npm
 8) Press "Copy to base 64" button.
 9) past the copied string into  "Oauth STR" properties of the "ecowatt" Node.
 
-##Usage
+## Usage
 
 - It is allowed only one call every 15mn to the API, subsequent calls are blocked until time out occure.
 - Option "Use RTE Sandbox URL" allow unlimited calls but the structure returned is always the same (usefull to understand the format).
