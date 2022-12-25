@@ -7,7 +7,7 @@ Make API call to French RTE Site  ("Réseau de Transport d'Electricité") in ord
 API documentation here : https://data.rte-france.com/documents/20182/224298/FR_GU_API_Ecowatt_v04.00.01.pdf
 
 ## Installation
-NPM ...
+using npm
 
 ##Setup
 
@@ -26,7 +26,7 @@ NPM ...
 
 ##Usage
 
-- It is allowed only one call every 15mn to the API, subsequent calls are blocked until thz time out.
+- It is allowed only one call every 15mn to the API, subsequent calls are blocked until time out occure.
 - Option "Use RTE Sandbox URL" allow unlimited calls but the structure returned is always the same (usefull to understand the format).
 
 
