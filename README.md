@@ -7,7 +7,7 @@ Make API call to French RTE Site  ("Réseau de Transport d'Electricité") in ord
 API documentation here : https://data.rte-france.com/documents/20182/224298/FR_GU_API_Ecowatt_v04.00.01.pdf
 
 ## Installation
-npm -i node-red-contrib-ecowatt
+npm i node-red-contrib-ecowatt
 
 ## Setup
 
