@@ -39,7 +39,6 @@ module.exports = function(RED) {
                     node.send(msg); 
                     return;
                   }
-                  //var tmp_path= '/open_api/ecowatt/v4/'+((config.sandbox==true)?('sandbox/'):(''))+'signals';
                   var body2 = '';                 
                   var options2 = {
                       hostname: "digital.iservices.rte-france.com",
@@ -56,7 +55,6 @@ module.exports = function(RED) {
                       resp.on('end',function(){
                           if (body2!='') {
                               var r_obj = JSON.parse(body2);
-                              console.log("res=",r_obj.signals[0].message);
                               node.status({fill:"green",shape:"dot",text:r_obj.signals[0].message});
                               msg.payload = r_obj;
                               node.send(msg);                          

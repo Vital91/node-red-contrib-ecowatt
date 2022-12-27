@@ -1,0 +1,70 @@
+[
+    {
+        "id": "f175e5464bcb44e9",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5500d3ad878633a6",
+        "type": "ecowatt",
+        "z": "f175e5464bcb44e9",
+        "name": "",
+        "ostr": "OWM1..................MmVlYg==",
+        "sandbox": false,
+        "x": 440,
+        "y": 160,
+        "wires": [
+            [
+                "ace0ef28d3549b02"
+            ]
+        ]
+    },
+    {
+        "id": "19e46ce37e2c7dba",
+        "type": "inject",
+        "z": "f175e5464bcb44e9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "5500d3ad878633a6"
+            ]
+        ]
+    },
+    {
+        "id": "ace0ef28d3549b02",
+        "type": "debug",
+        "z": "f175e5464bcb44e9",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 160,
+        "wires": []
+    }
+]
