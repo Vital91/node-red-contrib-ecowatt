@@ -1,28 +1,33 @@
 {
-    "name" : "@Lativ91/node-red-contrib-ecowatt",
-    "version"      : "0.1.0",
-    "description"  : "A sample node to get RTE EcoWatt forcast",
-    "dependencies": {
-    },
-
-    "license": "MIT",
-
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Vital91/node-red-contrib-ecowatt"
-      },
-
-      "author": {
-        "name": "Vital G.",
-        "email": "crevette091@gmail.com"
-      },  
-
-    "node-red" : {
-        "nodes": {
-            "ecowatt": "ecowatt.js"
-        }
-    },
-
-    "keywords": [ "ecowatt","RTE" ]
+  "name": "@vital91/node-red-contrib-ecowatt",
+  "version": "0.1.1",
+  "description": "A sample node to get RTE EcoWatt forcast",
+  "dependencies": {},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vital91/node-red-contrib-ecowatt.git"
+  },
+  "author": "Vital G. <crevette091@gmail.com>",
+  "node-red": {
+    "version": ">=2.0",
+    "nodes": {
+      "ecowatt": "ecowatt.js"
+    }
+  },
+  "keywords": [
+    "ecowatt",
+    "RTE","node-red"
+  ],
+  "bugs": {
+    "url": "https://github.com/Vital91/node-red-contrib-ecowatt/issues"
+  },
+  "homepage": "https://github.com/Vital91/node-red-contrib-ecowatt#readme",
+  "main": "ecowatt.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
-
