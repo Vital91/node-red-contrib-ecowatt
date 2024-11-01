@@ -4,7 +4,7 @@ Nodered Node to get RTE ecowatt forcast
 ## Description
 Make API call to French RTE Site  ("Réseau de Transport d'Electricité") in order to retrieve "ecowatt" forcast.
 
-API documentation here : https://data.rte-france.com/documents/20182/224298/FR_GU_API_Ecowatt_v04.00.01.pdf
+API documentation here : https://data.rte-france.com/catalog/-/api/doc/user-guide/Ecowatt/5.0
 
 ## Installation
 npm i node-red-contrib-ecowatt
@@ -28,8 +28,7 @@ npm i node-red-contrib-ecowatt
 
 - It is allowed only one call every 15mn to the API, subsequent calls are blocked until time out occure.
 - Option "Use RTE Sandbox URL" allow unlimited calls but the structure returned is always the same (usefull to understand the format).
-
-
+- Don't forget to subscribe to the new API Version on the RTE site when you upgrade the Node !
 
 
 
