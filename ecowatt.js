@@ -43,7 +43,7 @@ module.exports = function(RED) {
                   var options2 = {
                       hostname: "digital.iservices.rte-france.com",
                       port: 443,
-                      path: '/open_api/ecowatt/v4/'+((config.sandbox==true)?('sandbox/'):(''))+'signals',
+                      path: '/open_api/ecowatt/v5/'+((config.sandbox==true)?('sandbox/'):(''))+'signals',
                       method: 'GET',
                       headers: { 'Authorization':'Bearer ' + token }
                   };             
