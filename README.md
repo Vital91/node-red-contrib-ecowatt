@@ -28,7 +28,7 @@ npm i node-red-contrib-ecowatt
 
 - It is allowed only one call every 15mn to the API, subsequent calls are blocked until time out occure.
 - Option "Use RTE Sandbox URL" allow unlimited calls but the structure returned is always the same (usefull to understand the format).
-- Don't forget to subscribe to the new API Version on the RTE site when you upgrade the Node !
+- Don't forget to subscribe to the new V5 API Version on the RTE site when you upgrade the Node !
 
 
 
